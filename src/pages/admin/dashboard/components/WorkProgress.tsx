@@ -1,0 +1,46 @@
+import { workProgressData } from '../data/dashboardData'
+
+const WorkProgress = () => {
+  return (
+    <div className="card">
+      <h3 className="card-title">Work Progress</h3>
+      
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+            <span style={{ fontSize: '14px', color: '#666' }}>Task Completion</span>
+            <span style={{ fontSize: '14px', fontWeight: '600' }}>{workProgressData.taskCompletion}%</span>
+          </div>
+          <div style={{ height: '6px', background: '#f0f0f0', borderRadius: '3px', overflow: 'hidden' }}>
+            <div style={{ height: '100%', width: `${workProgressData.taskCompletion}%`, background: '#1a1a1a', borderRadius: '3px' }} />
+          </div>
+        </div>
+
+        <div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+            <span style={{ fontSize: '14px', color: '#666' }}>Ticket Resolution</span>
+            <span style={{ fontSize: '14px', fontWeight: '600' }}>{workProgressData.ticketResolution}%</span>
+          </div>
+          <div style={{ height: '6px', background: '#f0f0f0', borderRadius: '3px', overflow: 'hidden' }}>
+            <div style={{ height: '100%', width: `${workProgressData.ticketResolution}%`, background: '#1a1a1a', borderRadius: '3px' }} />
+          </div>
+        </div>
+
+        <div style={{ 
+          marginTop: '8px', 
+          padding: '12px', 
+          background: '#fafafa', 
+          borderRadius: '8px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center'
+        }}>
+          <span style={{ fontSize: '14px', color: '#666' }}>Overdue Tasks</span>
+          <span style={{ fontSize: '18px', fontWeight: '600', color: '#1a1a1a' }}>{workProgressData.overdueTasks}</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default WorkProgress
