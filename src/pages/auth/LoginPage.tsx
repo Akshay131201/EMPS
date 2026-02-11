@@ -16,7 +16,14 @@ const LoginPage = () => {
     const result = login(email, password)
     
     if (result.success) {
-      navigate('/admin/dashboard')
+      // Redirect based on role
+      if (result.user?.role === 'admin') {
+        navigate('/admin/dashboard')
+      } else if (result.user?.role === 'teamlead') {
+        navigate('/teamlead/dashboard')
+      } else {
+        navigate('/admin/dashboard')
+      }
     } else {
       setError(result.error || 'Login failed')
     }
@@ -90,9 +97,15 @@ const LoginPage = () => {
             <div style={{ fontWeight: 600, marginBottom: '6px', color: '#1a1a1a' }}>
               Demo Credentials:
             </div>
-            <div style={{ fontFamily: 'monospace' }}>
+            <div style={{ fontFamily: 'monospace', marginBottom: '8px' }}>
+              <strong>Admin:</strong><br />
               Email: admin@ispm.com<br />
               Password: admin123
+            </div>
+            <div style={{ fontFamily: 'monospace' }}>
+              <strong>Team Lead:</strong><br />
+              Email: teamlead@ispm.com<br />
+              Password: lead123
             </div>
           </div>
 

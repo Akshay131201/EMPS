@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import AdminLayout from '../layouts/AdminLayout'
+import TeamLeadLayout from '../layouts/TeamLeadLayout'
 import AdminDashboard from '../pages/admin/dashboard/AdminDashboard'
 
 import EmployeesPage from '../pages/admin/employees/EmployeesPage'
@@ -20,6 +21,20 @@ import ForgotPasswordPage from '../pages/auth/ForgotPasswordPage'
 
 // Protected Route
 import ProtectedRoute from '../components/ProtectedRoute'
+
+// Team Lead pages
+import TeamLeadDashboard from '../pages/TeamLead/Dashboard'
+import TeamLeadProjects from '../pages/TeamLead/Projects'
+import TeamLeadProjectDetail from '../pages/TeamLead/projects/detail/ProjectDetailPage'
+import TeamLeadTasks from '../pages/TeamLead/Tasks'
+import TeamLeadTickets from '../pages/TeamLead/Tickets'
+import TeamLeadWorkApproval from '../pages/TeamLead/WorkApproval'
+import TeamLeadAttendance from '../pages/TeamLead/Attendance'
+import TeamLeadTimeLogs from '../pages/TeamLead/TimeLogs'
+import TeamLeadFinance from '../pages/TeamLead/Finance'
+import TeamLeadReports from '../pages/TeamLead/Reports'
+import TeamLeadChat from '../pages/TeamLead/Chat'
+import TeamLeadSettings from '../pages/TeamLead/Settings'
 
 const AppRoutes = () => {
   return (
@@ -52,6 +67,27 @@ const AppRoutes = () => {
           <Route path="reports" element={<Reports />} />
           <Route path="notifications" element={<Notifications />} />
           <Route path="settings" element={<Settings />} />
+        </Route>
+
+        {/* Team Lead routes */}
+        <Route path="/teamlead" element={
+          <ProtectedRoute>
+            <TeamLeadLayout />
+          </ProtectedRoute>
+        }>
+          <Route index element={<Navigate to="/auth/login" replace />} />
+          <Route path="dashboard" element={<TeamLeadDashboard />} />
+          <Route path="projects" element={<TeamLeadProjects />} />
+          <Route path="projects/:projectId" element={<TeamLeadProjectDetail />} />
+          <Route path="tasks" element={<TeamLeadTasks />} />
+          <Route path="tickets" element={<TeamLeadTickets />} />
+          <Route path="work-approval" element={<TeamLeadWorkApproval />} />
+          <Route path="attendance" element={<TeamLeadAttendance />} />
+          <Route path="time-logs" element={<TeamLeadTimeLogs />} />
+          <Route path="finance" element={<TeamLeadFinance />} />
+          <Route path="reports" element={<TeamLeadReports />} />
+          <Route path="chat" element={<TeamLeadChat />} />
+          <Route path="settings" element={<TeamLeadSettings />} />
         </Route>
 
         {/* Catch all - redirect to login */}
