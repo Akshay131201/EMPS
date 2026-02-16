@@ -1,7 +1,7 @@
-import UnderConstruction from '../../components/UnderConstruction'
+import WorkApprovalPage from './workApproval/WorkApprovalPage'
 
 const WorkApproval = () => {
-  return <UnderConstruction pageName="Self-Work Approval" />
+  return <WorkApprovalPage />
 }
 
 export default WorkApproval

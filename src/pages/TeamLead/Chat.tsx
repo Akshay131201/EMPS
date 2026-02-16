@@ -1,7 +1,7 @@
-import UnderConstruction from '../../components/UnderConstruction'
+import TeamChatPage from './chat/TeamChatPage'
 
 const Chat = () => {
-  return <UnderConstruction pageName="Team Chat / Discussion" />
+  return <TeamChatPage />
 }
 
 export default Chat

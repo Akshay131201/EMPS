@@ -1,7 +1,7 @@
-import UnderConstruction from '../../components/UnderConstruction'
+import TeamAttendancePage from './attendance/TeamAttendancePage'
 
 const Attendance = () => {
-  return <UnderConstruction pageName="Team Attendance" />
+  return <TeamAttendancePage />
 }
 
 export default Attendance

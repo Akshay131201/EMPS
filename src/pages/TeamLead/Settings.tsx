@@ -1,7 +1,7 @@
-import UnderConstruction from '../../components/UnderConstruction'
+import ProfileSettingsPage from './settings/ProfileSettingsPage'
 
 const Settings = () => {
-  return <UnderConstruction pageName="Profile & Settings" />
+  return <ProfileSettingsPage />
 }
 
 export default Settings

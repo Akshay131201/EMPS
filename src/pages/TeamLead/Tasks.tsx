@@ -1,7 +1,7 @@
-import UnderConstruction from '../../components/UnderConstruction'
+import TeamTasksPage from './tasks/TeamTasksPage'
 
 const Tasks = () => {
-  return <UnderConstruction pageName="Team Task Management" />
+  return <TeamTasksPage />
 }
 
 export default Tasks

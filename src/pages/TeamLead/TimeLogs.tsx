@@ -1,7 +1,7 @@
-import UnderConstruction from '../../components/UnderConstruction'
+import TimeLogReviewPage from './timeLogs/TimeLogReviewPage'
 
 const TimeLogs = () => {
-  return <UnderConstruction pageName="Time Log Review" />
+  return <TimeLogReviewPage />
 }
 
 export default TimeLogs

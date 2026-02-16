@@ -27,8 +27,11 @@ import TeamLeadDashboard from '../pages/TeamLead/Dashboard'
 import TeamLeadProjects from '../pages/TeamLead/Projects'
 import TeamLeadProjectDetail from '../pages/TeamLead/projects/detail/ProjectDetailPage'
 import TeamLeadTasks from '../pages/TeamLead/Tasks'
+import TeamLeadTaskDetail from '../pages/TeamLead/tasks/detail/TaskDetailPage'
 import TeamLeadTickets from '../pages/TeamLead/Tickets'
+import TeamLeadTicketDetail from '../pages/TeamLead/tickets/detail/TicketDetailPage'
 import TeamLeadWorkApproval from '../pages/TeamLead/WorkApproval'
+import TeamLeadWorkApprovalDetail from '../pages/TeamLead/workApproval/detail/WorkApprovalDetailPage'
 import TeamLeadAttendance from '../pages/TeamLead/Attendance'
 import TeamLeadTimeLogs from '../pages/TeamLead/TimeLogs'
 import TeamLeadFinance from '../pages/TeamLead/Finance'
@@ -80,8 +83,11 @@ const AppRoutes = () => {
           <Route path="projects" element={<TeamLeadProjects />} />
           <Route path="projects/:projectId" element={<TeamLeadProjectDetail />} />
           <Route path="tasks" element={<TeamLeadTasks />} />
+          <Route path="tasks/:taskId" element={<TeamLeadTaskDetail />} />
           <Route path="tickets" element={<TeamLeadTickets />} />
+          <Route path="tickets/:ticketId" element={<TeamLeadTicketDetail />} />
           <Route path="work-approval" element={<TeamLeadWorkApproval />} />
+          <Route path="work-approval/:id" element={<TeamLeadWorkApprovalDetail />} />
           <Route path="attendance" element={<TeamLeadAttendance />} />
           <Route path="time-logs" element={<TeamLeadTimeLogs />} />
           <Route path="finance" element={<TeamLeadFinance />} />

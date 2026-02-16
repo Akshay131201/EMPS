@@ -1,7 +1,7 @@
-import UnderConstruction from '../../components/UnderConstruction'
+import ReportsPage from './reports/ReportsPage'
 
 const Reports = () => {
-  return <UnderConstruction pageName="Reports" />
+  return <ReportsPage />
 }
 
 export default Reports

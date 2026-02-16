@@ -1,7 +1,7 @@
-import UnderConstruction from '../../components/UnderConstruction'
+import TicketsPage from './tickets/TicketsPage'
 
 const Tickets = () => {
-  return <UnderConstruction pageName="Ticket Center" />
+  return <TicketsPage />
 }
 
 export default Tickets

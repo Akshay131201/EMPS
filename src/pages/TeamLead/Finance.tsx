@@ -1,7 +1,7 @@
-import UnderConstruction from '../../components/UnderConstruction'
+import ProjectFinanceView from './finance/ProjectFinanceView'
 
 const Finance = () => {
-  return <UnderConstruction pageName="Project Finance View" />
+  return <ProjectFinanceView />
 }
 
 export default Finance
