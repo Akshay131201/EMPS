@@ -13,6 +13,12 @@ export const DUMMY_USERS = [
     role: 'teamlead',
   },
   {
+    email: 'employee@ispm.com',
+    password: 'emp123',
+    fullName: 'John Doe',
+    role: 'employee',
+  },
+  {
     email: 'user@ispm.com',
     password: 'user123',
     fullName: 'Regular User',

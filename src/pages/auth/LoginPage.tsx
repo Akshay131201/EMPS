@@ -21,6 +21,8 @@ const LoginPage = () => {
         navigate('/admin/dashboard')
       } else if (result.user?.role === 'teamlead') {
         navigate('/teamlead/dashboard')
+      } else if (result.user?.role === 'employee') {
+        navigate('/employee/dashboard')
       } else {
         navigate('/admin/dashboard')
       }
@@ -102,10 +104,15 @@ const LoginPage = () => {
               Email: admin@ispm.com<br />
               Password: admin123
             </div>
-            <div style={{ fontFamily: 'monospace' }}>
+            <div style={{ fontFamily: 'monospace', marginBottom: '8px' }}>
               <strong>Team Lead:</strong><br />
               Email: teamlead@ispm.com<br />
               Password: lead123
+            </div>
+            <div style={{ fontFamily: 'monospace' }}>
+              <strong>Employee:</strong><br />
+              Email: employee@ispm.com<br />
+              Password: emp123
             </div>
           </div>
 

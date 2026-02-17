@@ -1,17 +1,17 @@
 import { NavLink } from 'react-router-dom'
 
 const menuItems = [
-  { label: 'Dashboard', path: '/teamlead/dashboard' },
-  { label: 'My Projects', path: '/teamlead/projects' },
-  { label: 'Team Tasks', path: '/teamlead/tasks' },
-  { label: 'Ticket Center', path: '/teamlead/tickets' },
-  { label: 'Work Approval', path: '/teamlead/work-approval' },
-  { label: 'Team Attendance', path: '/teamlead/attendance' },
-  { label: 'Time Logs', path: '/teamlead/time-logs' },
-  { label: 'Project Finance', path: '/teamlead/finance' },
-  { label: 'Reports', path: '/teamlead/reports' },
-  { label: 'Team Chat', path: '/teamlead/chat' },
-  { label: 'Profile & Settings', path: '/teamlead/settings' },
+  { label: 'Dashboard', path: '/teamlead/dashboard', icon: '📊' },
+  { label: 'My Projects', path: '/teamlead/projects', icon: '📁' },
+  { label: 'Team Tasks', path: '/teamlead/tasks', icon: '✓' },
+  { label: 'Ticket Center', path: '/teamlead/tickets', icon: '🎫' },
+  { label: 'Work Approval', path: '/teamlead/work-approval', icon: '📋' },
+  { label: 'Team Attendance', path: '/teamlead/attendance', icon: '📅' },
+  { label: 'Time Logs', path: '/teamlead/time-logs', icon: '⏱️' },
+  { label: 'Project Finance', path: '/teamlead/finance', icon: '💰' },
+  { label: 'Reports', path: '/teamlead/reports', icon: '📈' },
+  { label: 'Team Chat', path: '/teamlead/chat', icon: '💬' },
+  { label: 'Profile & Settings', path: '/teamlead/settings', icon: '⚙️' },
 ]
 
 const TeamLeadSidebar = () => {
@@ -50,6 +50,7 @@ const TeamLeadSidebar = () => {
               `sidebar-link ${isActive ? 'active' : ''}`
             }
           >
+            <span style={{ fontSize: '18px', marginRight: '12px' }}>{item.icon}</span>
             {item.label}
           </NavLink>
         ))}

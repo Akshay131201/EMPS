@@ -1,16 +1,16 @@
 import { NavLink } from 'react-router-dom'
 
 const menuItems = [
-  { label: 'Dashboard', path: '/admin/dashboard' },
-  { label: 'Employees', path: '/admin/employees' },
-  { label: 'Projects', path: '/admin/projects' },
-  { label: 'Tasks', path: '/admin/tasks' },
-  { label: 'Tickets', path: '/admin/tickets' },
-  { label: 'Attendance', path: '/admin/attendance' },
-  { label: 'Finance', path: '/admin/finance' },
-  { label: 'Reports', path: '/admin/reports' },
-  { label: 'Notifications', path: '/admin/notifications' },
-  { label: 'Settings', path: '/admin/settings' },
+  { label: 'Dashboard', path: '/admin/dashboard', icon: '📊' },
+  { label: 'Employees', path: '/admin/employees', icon: '👥' },
+  { label: 'Projects', path: '/admin/projects', icon: '📁' },
+  { label: 'Tasks', path: '/admin/tasks', icon: '✓' },
+  { label: 'Tickets', path: '/admin/tickets', icon: '🎫' },
+  { label: 'Attendance', path: '/admin/attendance', icon: '📅' },
+  { label: 'Finance', path: '/admin/finance', icon: '💰' },
+  { label: 'Reports', path: '/admin/reports', icon: '📈' },
+  { label: 'Notifications', path: '/admin/notifications', icon: '🔔' },
+  { label: 'Settings', path: '/admin/settings', icon: '⚙️' },
 ]
 
 const AdminSidebar = () => {
@@ -49,6 +49,7 @@ const AdminSidebar = () => {
               `sidebar-link ${isActive ? 'active' : ''}`
             }
           >
+            <span style={{ fontSize: '18px', marginRight: '12px' }}>{item.icon}</span>
             {item.label}
           </NavLink>
         ))}
